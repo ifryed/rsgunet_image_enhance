@@ -18,6 +18,7 @@ import tensorflow.contrib.slim as slim
 import numpy as np
 import scipy.stats as st
 import cv2
+from functools import reduce
 
 def get_model_params(sess, param_collection="model_params"):
     pcoll = tf.get_collection(param_collection)

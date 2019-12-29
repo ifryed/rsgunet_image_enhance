@@ -184,16 +184,16 @@ class ImageFilesDataPipeline(DataPipeline):
 
     def _produce_one_sample(self):
         dirname = os.path.dirname(self.path)
-        if not check_dir(dirname):
-            raise ValueError("Invalid data path.")
+        # if not check_dir(dirname):
+        #     raise ValueError("Invalid data path.")
         with open(self.path, 'r') as fid:
-            flist = [l.strip() for l in fid.xreadlines()]
+            flist = [l.strip() for l in fid.readlines()]
 
         if self.shuffle:
             random.shuffle(flist)
 
-        input_files = [os.path.join(dirname, 'iphone_patch', f) for f in flist]
-        output_files = [os.path.join(dirname, 'canon_patch', f) for f in flist]
+        input_files = [os.path.join(dirname, 'iphone', f) for f in flist]
+        output_files = [os.path.join(dirname, 'canon', f) for f in flist]
 
         self.nsamples = len(input_files)
 

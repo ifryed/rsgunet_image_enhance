@@ -33,7 +33,7 @@ def content_loss(target, prediction,batch_size):
   CONTENT_LAYER = 'relu5_4'
   CONTENT_LAYER1 = 'relu3_4'
   CONTENT_LAYER2 = 'relu1_2'
-  vgg_dir = '/root/hj9/ECCV/image_enhance_challenge/vgg_pretrained/imagenet-vgg-verydeep-19.mat'
+  vgg_dir = '../../datasets/training_data/iphone/training_data/imagenet-vgg-verydeep-19.mat'
   enhanced_vgg = vgg.net(vgg_dir, vgg.preprocess(prediction * 255))
   dslr_vgg = vgg.net(vgg_dir, vgg.preprocess(target * 255))
 
