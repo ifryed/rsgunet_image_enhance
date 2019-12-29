@@ -247,9 +247,9 @@ if __name__ == '__main__':
     # ----------------------------------------------------------------------------
     req_grp = parser.add_argument_group('required')
     req_grp.add_argument('--checkpoint_dir', default='../checkpoint/', help='directory to save checkpoints to.')
-    req_grp.add_argument('--data_dir', default='../../datasets/training_data/iphone/training_data/dataset_train.txt',
+    req_grp.add_argument('--data_dir', default='../../datasets/training_data/iphone/training_data/dataset.txt',
                          help='input directory containing the training .tfrecords or images.')
-    req_grp.add_argument('--eval_data_dir', default='../../datasets/training_data/iphone/training_data/dataset_test.txt',
+    req_grp.add_argument('--eval_data_dir', default='../../datasets/training_data/iphone/test_data/patches/dataset.txt',
                          type=str, help='directory with the validation data.')
 
     # Training, logging and checkpointing parameters

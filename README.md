@@ -13,18 +13,26 @@
 
 ## data structure
 BASE_FOLER/ ┐
-            ├ canon/ ┐
-            │        ├ 0.jpg
-            │        ├ 1.jpg
-            │        :
-            ├ iphone/ ┐
-            │         ├ 0.jpg
-            │         ├ 1.jpg
-            │         :
-            ├ dataset_test.txt
-            ├ dataset_train.txt
-            └ imagenet-vgg-verydeep-19.mat
-                                  
+            ├ training_data/ ┐
+            │                ├
+            │                ├ canon/ ┐
+            │                │        ├ 0.jpg
+            │                │        :
+            │                ├ iphone/ ┐
+            │                │         ├ 0.jpg
+            │                │         :
+            │                └ dataset.txt
+            └ test_data/patches/┐
+                                ├
+                                ├ canon/ ┐
+                                │        ├ 0.jpg
+                                │        :
+                                ├ iphone/ ┐
+                                │         ├ 0.jpg
+                                │         :
+                                ├ dataset.txt
+                                └ imagenet-vgg-verydeep-19.mat
+                                    
                     
 
 ## Please cite our paper:
