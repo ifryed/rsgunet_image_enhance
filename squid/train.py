@@ -22,6 +22,9 @@ import os
 import tensorflow as tf
 import time
 
+import sys
+sys.path.append('./')
+
 from loss import compute_loss
 from net import unet
 from data import data_pipeline as dp
